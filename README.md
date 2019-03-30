@@ -1,5 +1,3 @@
-test for Chris Lacey
-
 # sequelize-cli-helpers
 
 A power-up for [Sequelize](http://docs.sequelizejs.com/) at the command line.
