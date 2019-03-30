@@ -1,3 +1,5 @@
+test for Chris Lacey
+
 # sequelize-cli-helpers
 
 A power-up for [Sequelize](http://docs.sequelizejs.com/) at the command line.
@@ -41,7 +43,7 @@ module.exports ={
   fileNameFormat: 'N.D',          // format of file name to be generated, see below
   forceConfirmation: true,        // forces prompt for confirmation of some values
   matchNumberOn: 'N',             // if using a 'N' format in your string, this determines how to calculate the next number
-  numberPaddedLength: 4,          
+  numberPaddedLength: 4,
   separator: '-',                 // separator to use between each part of the name, e.g. `20190311133906-create_table_hufflepuffs.js`
   paths: {
     templates: path.resolve('./db/templates/'),  // path to your custom templates, see below
@@ -51,7 +53,7 @@ module.exports ={
 
 ## File Name Formats
 
-One of the uses of `sequelize-cli-helpers` is to control the naming of your `sequelize-cli` migration, seeders, and model files. Not all 
+One of the uses of `sequelize-cli-helpers` is to control the naming of your `sequelize-cli` migration, seeders, and model files. Not all
 teams want to use the default `sequelize-cli` behavior, and this tool provides complete control of that naming, and makes part of it
 automatic.
 
@@ -67,31 +69,30 @@ The following format parts can be utilized:
 
 You can order the file name format in any order excepting that a date `Tz` or a number `N` _must_ come first.
 
-The number will be auto-generated based on other files with numbers in their names and filted by the date format to match on, 
-the `matchNumberOn`. If `matchNumberOn === 'N'`, then it will consider all files of the same format with a number; 
-if `matchNumberOn === 'G'`, the existing files will be filtered on by git info; and so on. From these filtered lists, 
+The number will be auto-generated based on other files with numbers in their names and filted by the date format to match on,
+the `matchNumberOn`. If `matchNumberOn === 'N'`, then it will consider all files of the same format with a number;
+if `matchNumberOn === 'G'`, the existing files will be filtered on by git info; and so on. From these filtered lists,
 the number of the last file name in the list will be used to generate the next number.
 
 ## Custom Templates
 
-`sequelize-cli-helpers` has a default template to create a Sequelize table migration, see [`migration_create_table.hbs`](./src/templates/migration_create_table.hbs). 
-You can provide your own for your project so long as you provide a `path.templates` in your `.sequelizeclihelpersrc` file, and have a template 
-of the same name (`migration_create_table.hbs`) in that path, and the template must handle the same provided `context` keys (see our migration file, 
+`sequelize-cli-helpers` has a default template to create a Sequelize table migration, see [`migration_create_table.hbs`](./src/templates/migration_create_table.hbs).
+You can provide your own for your project so long as you provide a `path.templates` in your `.sequelizeclihelpersrc` file, and have a template
+of the same name (`migration_create_table.hbs`) in that path, and the template must handle the same provided `context` keys (see our migration file,
 must handle `tableName`, `attributes`).
-
 
 ## Version
 
-This is currently a pre-`1.0` project. 
+This is currently a pre-`1.0` project.
 
 If you want to see where we _think_ we are headed, please see [SPEC.md](SPEC.md).
 
 ## Branches
 
-| Branch | Status | Coverage |   |
-| ------ | ------ | -------- | - |
-| `develop` | | | Work in progress |
-| `master` | |  | `0.1.1` |
+| Branch    | Status | Coverage |                  |
+| --------- | ------ | -------- | ---------------- |
+| `develop` |        |          | Work in progress |
+| `master`  |        |          | `0.1.1`          |
 
 ## Contributing
 
